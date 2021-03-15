@@ -1,0 +1,12 @@
+{
+  "name": "Marvel_App",
+  "displayName": "Marvel_App",
+  "expo": {
+    "name": "Marvel_App",
+    "slug": "Marvel_App",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
