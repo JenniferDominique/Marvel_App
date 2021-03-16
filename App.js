@@ -7,9 +7,9 @@ export default function App() {
     <View style={styles.container}>
       <Image
           source={{
-            uri: 'https://www.pngkit.com/png/detail/142-1420287_marvels-agents-of-shield-tv-show-logo-television.png',
+            uri: 'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/logo.png',
           }}
-          style={{ width: 200, height: 200 }}
+          style={{ width: 336, height: 303 }}
       ></Image>
 
       <Text
