@@ -5,8 +5,17 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      
+      <Text
+        style={{
+          color: '#DAD8D8',
+          fontSize: 24,
+          fontFamily: 'monospace',
+          fontStyle: 'normal'
+        }}
+      >
+        FANVERSE
+      </Text>
     </View>
   );
 }
@@ -14,7 +23,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#0A0430',
     alignItems: 'center',
     justifyContent: 'center',
   },
