@@ -3,7 +3,7 @@
 ## Build do Sistema
 
 * Abra o terminal de comando (cmd) dentro do diretório do projeto;
-  ** Obs.: Tem que ter o React e o Expo devidamente instalado.
+  * Obs.: Tem que ter o React e o Expo devidamente instalado.
 
 * Digite os seguintes para fazer o build do sistema utilizando a ferramenta Expo:
 ```
