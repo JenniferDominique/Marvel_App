@@ -10,6 +10,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import CarouselPager from 'react-native-carousel-pager';
 import BackButton from './BackButton';
+import ProfileButton from './ProfileButton';
 
 
 function HomeScreen({ navigation: { navigate } }) {
@@ -17,7 +18,10 @@ function HomeScreen({ navigation: { navigate } }) {
 
   return (
     <View style={styles.container}>
-      <BackButton />
+      <View style={styles.row}>
+        <BackButton />
+        <ProfileButton />
+      </View>
 
       <Text style={styles.titulo}>Explore</Text>
 
@@ -246,6 +250,12 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace',
     fontStyle: 'normal',
   },
+
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
 });
 
 export default HomeScreen;
