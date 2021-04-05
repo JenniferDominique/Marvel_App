@@ -20,15 +20,37 @@ function HomeScreen({ navigation: { navigate } }) {
     <View style={styles.container}>
       <View style={styles.row}>
         <BackButton />
+        
         <ProfileButton />
       </View>
 
-      <Text style={styles.titulo}>Explore</Text>
+      <View style={styles.titleView}>
+        <Text style={styles.titulo}>
+          EXPLORE
+        </Text>
+      </View>
+
 
       <CarouselPager
         key="menu"
-        initialPage={0}
-        pageSpacing={-150}>
+        initialPage={1}
+        pageSpacing={-160}
+        pageStyle={styles.carrosel}
+      >
+        <TouchableOpacity id='gamesButton'
+          style={styles.buttonBackStyle}
+          activeOpacity={0.5}
+          onPress={() => navigate('Games')}
+          >
+          <Image
+          key="games"
+          style={styles.imgButton}
+          source={{
+            uri:
+              'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_games.png',
+          }}
+        />
+        </TouchableOpacity>
 
         <TouchableOpacity id='moviesButton'
           style={styles.buttonBackStyle}
@@ -37,25 +59,10 @@ function HomeScreen({ navigation: { navigate } }) {
           >
           <Image
           key="movies"
-          style={{ width: 100, height: 100 }}
+          style={styles.imgButton}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_movies.png',
-          }}
-        />
-        </TouchableOpacity>
-
-        <TouchableOpacity id='gamesButton'
-          style={styles.buttonBackStyle}
-          activeOpacity={0.5}
-          onPress={() => navigate('Games')}
-          >
-          <Image
-          key="games"
-          style={{ width: 100, height: 100 }}
-          source={{
-            uri:
-              'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_games.png',
           }}
         />
         </TouchableOpacity>
@@ -67,7 +74,7 @@ function HomeScreen({ navigation: { navigate } }) {
           >
           <Image
           key="tv"
-          style={{ width: 100, height: 100 }}
+          style={styles.imgButton}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_tv.png',
@@ -82,7 +89,7 @@ function HomeScreen({ navigation: { navigate } }) {
           >
           <Image
           key="comics"
-          style={{ width: 100, height: 100 }}
+          style={styles.imgButton}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_comics.png',
@@ -97,32 +104,33 @@ function HomeScreen({ navigation: { navigate } }) {
           >
           <Image
           key="news"
-          style={{ width: 100, height: 100 }}
+          style={styles.imgButton}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_news.png',
           }}
         />
         </TouchableOpacity>
-        
       </CarouselPager>
+
+
 
       <TextInput
         multiline
-        placeholder="Search..."
-        style={{ backgroundColor: 'white', margin: 10 }}
+        placeholder="   Search..."
+        style={styles.input}
       />
 
-      <Text style={styles.titulo}>What's New?</Text>
+      <Text style={styles.subtitulo}>What's New?</Text>
 
       <CarouselPager
         key="WhatNews"
-        initialPage={0}
+        initialPage={1}
         pageSpacing={-150}
-        //pageStyle={{backgroundColor: '#fff'}}
+        pageStyle={styles.carrosel}
       >
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/TV%20Show%20-%20Marvel's%20616%20(2020).jpg",
@@ -130,7 +138,7 @@ function HomeScreen({ navigation: { navigate } }) {
         />
 
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Games%20-%20Marvel's%20Spider-Man.%20Miles%20Morales%20(2020).jpg",
@@ -138,16 +146,18 @@ function HomeScreen({ navigation: { navigate } }) {
         />
       </CarouselPager>
 
-      <Text style={styles.titulo}>Recently Seen</Text>
+
+
+      <Text style={styles.subtitulo}>Recently Seen</Text>
 
       <CarouselPager
         key="RecentlySeen"
-        initialPage={0}
+        initialPage={1}
         pageSpacing={-150}
-        //pageStyle={{backgroundColor: '#fff'}}
+        pageStyle={styles.carrosel}
       >
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Game%20-%20Fortnite%20(2020).jpg',
@@ -155,7 +165,7 @@ function HomeScreen({ navigation: { navigate } }) {
         />
 
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Guardians%20of%20the%20Galaxy%20(2014).jpg',
@@ -163,7 +173,7 @@ function HomeScreen({ navigation: { navigate } }) {
         />
 
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/TV%20Show%20-%20Marvel%20Studios%20-%20Legends%20(2021).jpg',
@@ -171,14 +181,17 @@ function HomeScreen({ navigation: { navigate } }) {
         />
       </CarouselPager>
 
-      <Text style={styles.titulo}>Most Viewed</Text>
+      
+      <Text style={styles.subtitulo}>Most Viewed</Text>
 
       <CarouselPager
         key="MostViewed"
-        initialPage={0}
-        pageSpacing={-150}>
+        initialPage={1}
+        pageSpacing={-150}
+        pageStyle={styles.carrosel}
+      >
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Games%20-%20Marvel's%20Spider-Man.%20Miles%20Morales%20(2020).jpg",
@@ -186,7 +199,7 @@ function HomeScreen({ navigation: { navigate } }) {
         />
 
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Captain%20America-%20Civil%20War%20(2016).jpg',
@@ -194,7 +207,7 @@ function HomeScreen({ navigation: { navigate } }) {
         />
 
         <Image
-          style={{ width: 100, height: 150 }}
+          style={styles.img}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Guardians%20of%20the%20Galaxy%20(2014).jpg',
@@ -202,14 +215,18 @@ function HomeScreen({ navigation: { navigate } }) {
         />
       </CarouselPager>
 
-      <Text style={styles.titulo}>Spacial Content</Text>
+      
+      
+      <Text style={styles.subtitulo}>Spacial Content</Text>
 
       <CarouselPager
         key="SpecialContent"
-        initialPage={0}
-        pageSpacing={-100}>
+        initialPage={1}
+        pageSpacing={-110}
+        pageStyle={styles.carrosel}
+      >
         <Image
-          style={{ width: 130, height: 180 }}
+          style={styles.imgSpecial}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_characters.png',
@@ -217,7 +234,7 @@ function HomeScreen({ navigation: { navigate } }) {
         />
 
         <Image
-          style={{ width: 130, height: 180 }}
+          style={styles.imgSpecial}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_publicFav.png',
@@ -225,7 +242,7 @@ function HomeScreen({ navigation: { navigate } }) {
         />
 
         <Image
-          style={{ width: 130, height: 180 }}
+          style={styles.imgSpecial}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_comicsEvent.png',
@@ -242,20 +259,63 @@ const styles = StyleSheet.create({
     backgroundColor: '#0A0430',
   },
 
-  titulo: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: '#DAD8D8',
-    fontSize: 24,
-    fontFamily: 'monospace',
-    fontStyle: 'normal',
-  },
-
   row:{
     // https://reactnative.dev/docs/layout-props
     flexDirection: 'row',
     justifyContent: 'space-between'
-  }
+  },
+
+  titleView:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom:15,
+  },
+
+  titulo: {
+    color: '#DAD8D8',
+    fontSize: 30,
+    fontFamily: 'monospace',
+  },
+
+  input:{
+    backgroundColor: 'white',
+    fontSize:15,
+    borderRadius:5,
+    marginTop:20,
+    marginBottom:20,
+    marginRight:30,
+    marginLeft:30,
+  },
+
+  carrosel:{
+    alignItems:'center', 
+    justifyContent:'center',
+  },
+
+  subtitulo: {
+    color: '#DAD8D8',
+    fontSize: 25,
+    fontFamily: 'monospace',
+    marginLeft:15,
+    marginTop:10,
+    marginBottom:15,
+  },
+
+  imgButton:{
+    width: 100, 
+    height: 100,
+  },
+
+  img:{
+    width: 100, 
+    height: 150,
+  },
+
+  imgSpecial:{
+    width: 130, 
+    height: 180,
+  },
+  
 });
 
 export default HomeScreen;

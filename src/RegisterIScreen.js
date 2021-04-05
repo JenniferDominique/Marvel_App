@@ -3,52 +3,55 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   Button,
-  TextInput,
 } from 'react-native';
-import BackButton from './BackButton';
 
-function RegisterIScreen({ navigation: { navigate } }) {
+function StartScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
-      <BackButton />
+      <Image
+        source={{
+          uri:
+            'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/logo.png',
+        }}
+        style={{ width: 300, height: 280 }}></Image>
 
-      <Text style={styles.titulo}>CADASTRAR</Text>
+      <View style={styles.acess}>
+        <Text style={styles.titulo}>
+          FANVERSE
+        </Text>
 
-      <TextInput
-        multiline
-        placeholder="Nome de Usuário"
-        style={{ backgroundColor: 'white', margin: 10 }}
-      />
-
-      <Text style={{ color: '#DAD8D8', fontSize: '10px', alignItems: 'left' }}>
-        Ao se inscrever, você concorda com os Termos de Serviço da Fanverse e
-        Política de Privacidade.
-      </Text>
-
-      <Button
-        title="Inscreva-se"
-        onPress={() => navigate('CadastroII')}
-        style={{ margin: 10, justifyContent: 'center' }}
-      />
+        <Button 
+          title="Login" 
+          onPress={() => navigate('Acesso')}
+          color='gray'
+        />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
+    justifyContent: 'center',
     flex: 1,
     backgroundColor: '#0A0430',
   },
 
-  titulo: {
+  acess: {
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#DAD8D8',
-    fontSize: 24,
-    fontFamily: 'monospace',
-    fontStyle: 'normal',
   },
+
+  titulo: {
+    color: '#DAD8D8',
+    fontSize: 30,
+    fontFamily: 'monospace',
+    marginBottom: 30,
+  },
+
 });
 
-export default RegisterIScreen;
+export default StartScreen;

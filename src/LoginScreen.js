@@ -13,23 +13,29 @@ function LoginScreen({ navigation: { navigate } }) {
     <View style={styles.container}>
       <BackButton/>
 
-      <Text style={styles.titulo}>LOGIN</Text>
+      <View style={styles.titleView}>
+        <Text style={styles.titulo}>
+          LOGIN
+        </Text>
+      </View>
 
       <TextInput
-        placeholder="E-mail"
-        style={{ backgroundColor: 'white', margin: 20 }}
+        placeholder="   E-mail"
+        style={styles.input}
       />
 
       <TextInput
-        placeholder="Senha"
-        style={{ backgroundColor: 'white', margin: 20 }}
+        placeholder="   Password"
+        style={styles.input}
       />
 
-      <Button
-        title="Entrar"
-        onPress={() => navigate('Home')}
-        style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
-      />
+      <View style={styles.button}>
+        <Button
+          title="Enter"
+          color='gray'
+          onPress={() => navigate('Home')}
+        />
+      </View>
     </View>
   );
 }
@@ -40,13 +46,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#0A0430',
   },
 
-  titulo: {
+  titleView:{
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  titulo: {
     color: '#DAD8D8',
-    fontSize: 24,
+    fontSize: 30,
     fontFamily: 'monospace',
     fontStyle: 'normal',
+  },
+
+  input:{
+    backgroundColor: 'white',
+    borderRadius:5,
+    marginTop:20,
+    marginRight:30,
+    marginLeft:30,
+  },
+  
+  button:{
+    alignItems:'center',
+    justifyContent:'center',
+    margin: 20,
   },
 });
 

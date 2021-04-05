@@ -31,19 +31,23 @@ function ProfileScreen({ navigation: { navigate } }) {
         <Text style={styles.userName}>
           littleuser_12
         </Text>
-
-        
       </View>
       
-      <Button
-        title="Profile Settings"
-        onPress={() => navigate('Settings')}
-      />
-        
-      <Button
-        title="Quit"
-        onPress={() => navigate('Quit')}
-      />
+      <View  style={styles.buttons}>
+        <Button
+          title="Profile Settings"
+          color='gray'
+          onPress={() => navigate('Settings')}
+        />
+      </View>
+
+      <View  style={styles.buttons}> 
+        <Button
+          title="Quit"
+          color='red'
+          onPress={() => navigate('Quit')}
+        />
+      </View>
 
     </View>
   );
@@ -83,6 +87,13 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontFamily: 'monospace',
     fontStyle: 'normal',
+    marginBottom:20,
+  },
+
+  buttons:{
+    alignItems:'center',
+    justifyContent:'center',
+    marginBottom:10,
   },
 });
 

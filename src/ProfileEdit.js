@@ -200,6 +200,7 @@ const styles = StyleSheet.create({
     marginRight:25,
     backgroundColor: 'white',
     height:20,
+    borderRadius:5,
   },
 });
 

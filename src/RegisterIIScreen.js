@@ -13,38 +13,37 @@ function RegisterIIScreen({ navigation: { navigate } }) {
     <View style={styles.container}>
       <BackButton />
 
-      <Text
-        style={{
-          color: '#DAD8D8',
-          fontSize: '30px',
-          alignItems: 'left',
-        }}>
-        CADASTRAR
-      </Text>
+      <View style={styles.titleView}>
+        <Text style={styles.titulo}>
+          REGISTER
+        </Text>
+      </View>
 
       <TextInput
         multiline
-        placeholder="E-mail"
-        style={{ backgroundColor: 'white', margin: 10 }}
+        placeholder="   E-mail"
+        style={styles.input}
       />
 
       <TextInput
         multiline
-        placeholder="Senha"
-        style={{ backgroundColor: 'white', margin: 10 }}
+        placeholder="   Password"
+        style={styles.input}
       />
 
       <TextInput
         multiline
-        placeholder="Confirmar Senha"
-        style={{ backgroundColor: 'white', margin: 10 }}
+        placeholder="   Password Confirmation"
+        style={styles.input}
       />
 
-      <Button
-        title="Próximo"
-        onPress={() => navigate('Home')}
-        style={{ margin: 10, justifyContent: 'center' }}
-      />
+      <View style={styles.button}>
+        <Button
+          title="Sing Up"
+          color='gray'
+          onPress={() => navigate('Home')}
+        />
+      </View>
     </View>
   );
 }
@@ -53,6 +52,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0A0430',
+  },
+
+  titleView:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom:20,
+  },
+
+  titulo: {
+    color: '#DAD8D8',
+    fontSize: 30,
+    fontFamily: 'monospace',
+  },
+
+  input:{
+    backgroundColor: 'white',
+    borderRadius:5,
+    marginBottom:20,
+    marginRight:30,
+    marginLeft:30,
+  },
+
+  button:{
+    alignItems:'center',
+    justifyContent:'center',
+    margin: 20,
   },
 });
 
