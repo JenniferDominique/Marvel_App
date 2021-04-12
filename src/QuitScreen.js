@@ -8,11 +8,16 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import BackButton from './BackButton';
+import ProfileButton from './ProfileButton';
 
 function QuitScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
-      <BackButton />
+      <View style={styles.row}>
+        <BackButton />
+        
+        <ProfileButton />
+      </View>
 
       <View style={styles.box}>
         <Text style={styles.txt}>
@@ -41,6 +46,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0A0430',
+  },
+
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
 
   box:{

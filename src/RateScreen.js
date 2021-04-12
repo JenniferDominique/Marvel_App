@@ -7,7 +7,8 @@ import {
   TextInput,
 } from 'react-native';
 import BackButton from './BackButton';
-import {AirbnbRating } from 'react-native-elements';
+import ProfileButton from './ProfileButton';
+import { AirbnbRating } from 'react-native-elements';
 
 function RateScreen({ navigation: { navigate } }) {
   let state = {
@@ -20,49 +21,53 @@ function RateScreen({ navigation: { navigate } }) {
 
   return (
     <View style={styles.container}>
-      <BackButton />
+      <View style={styles.row}>
+        <BackButton />
+        
+        <ProfileButton />
+      </View>
 
-      <View style={styles.titulo}>
-        <Text style={styles.titulo}>Guardian of the Galaxy</Text>
-
-        <Text style={styles.subTitulo}>Content</Text>
+      <View style={styles.tela}>
+        <Text style={styles.titulo}>
+          Guardian of the Galaxy
+        </Text>
 
         <AirbnbRating
-        count={10}
+        count={5}
         reviews={[
-          'Terrible',
           'Bad',
-          'OK',
           'Good',
           'Hmm...',
           'Very Good',
           'Wow',
-          'Amazing',
-          'Unbelievable',
-          'Jesus',
         ]}
-        defaultRating={5}
-        size={15}
+        defaultRating={3}
+        size={20}
       />
+    </View>
 
-        <Text style={styles.subTitulo}>Additional Description</Text>
+        <Text style={styles.subTitulo}>
+          Additional Description
+        </Text>
 
         <TextInput
           multiline
-          placeholder="Comment..."
-          style={{ backgroundColor: 'white', margin: 20 }}
+          placeholder=" Comment..."
+          style={styles.comment}
         />
 
-        <Button
-          title="Save"
-          style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
-        />
-
-        <Button
-          title="Cancel"
-          style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
-        />
-      </View>
+        <View style={styles.button}>
+          <Button
+            title="Cancel"
+            color="#8A8888"
+          />
+          
+          <Button
+            title="Save"
+            color="green"
+          />
+        </View>
+      
     </View>
   );
 }
@@ -73,23 +78,53 @@ const styles = StyleSheet.create({
     backgroundColor: '#0A0430',
   },
 
-  titulo: {
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+
+  tela:{
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  titulo: {
     color: '#DAD8D8',
     fontSize: 30,
     fontFamily: 'monospace',
     fontStyle: 'normal',
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
 
   subTitulo: {
-    alignItems: 'center',
-    justifyContent: 'center',
     color: '#DAD8D8',
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: 'monospace',
-    fontStyle: 'normal',
+    fontWeight: 'bold',
+    marginTop:30,
+    marginLeft:15,
+    textAlign: 'left',
   },
+
+  comment:{
+    backgroundColor: 'white', 
+    marginLeft:20,
+    marginRight:20,
+    marginTop:5,
+    height:50,
+    width:300,
+  },
+
+  button:{
+    marginLeft:20,
+    marginTop:30,
+    alignItems:'center',
+    justifyContent: 'space-evenly',
+    flexDirection: 'row',
+  },
+
 });
 
 export default RateScreen;

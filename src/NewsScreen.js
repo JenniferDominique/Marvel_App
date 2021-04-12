@@ -7,13 +7,16 @@ import {
   Button,
 } from 'react-native';
 import BackButton from './BackButton';
+import ProfileButton from './ProfileButton';
 
 function NewsScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
-      <BackButton
-          style={{ height: 20, padding: 10, backgroundColor: 'white' }}
-        />
+      <View style={styles.row}>
+        <BackButton />
+        
+        <ProfileButton />
+      </View>
 
       <View style={styles.titulo}>
         <Text style={styles.titulo}
@@ -115,6 +118,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'monospace',
     fontStyle: 'normal',
+  },
+
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
 
   subTitulo: {

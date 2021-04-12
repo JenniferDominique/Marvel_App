@@ -37,7 +37,7 @@ function ProfileEdit({ navigation: { navigate } }) {
       </View>
       
       <View style = {styles.infos}>
-        <View style={styles.botao}>
+        <View style={styles.button}>
           <Button
             title="Edit Photo"
             color="#8A8888"
@@ -94,12 +94,13 @@ function ProfileEdit({ navigation: { navigate } }) {
           style={styles.subTitulo}
         />
 
-        <View style={styles.botao2}>
+        <View style={styles.button2}>
           <Button
             title="Cancel"
             color="#8A8888"
             onPress={() => navigate('Settings')}
           />
+          
           <Button
             title="Save"
             color="green"
@@ -154,12 +155,12 @@ const styles = StyleSheet.create({
     marginLeft:15,
   },
 
-  botao:{
+  button:{
     width:100,
     marginLeft:20,
   },
 
-  botao2:{
+  button2:{
     marginLeft:20,
     marginTop:15,
     alignItems:'center',

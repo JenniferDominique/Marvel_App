@@ -7,17 +7,24 @@ import {
   Button,
 } from 'react-native';
 import BackButton from './BackButton';
+import ProfileButton from './ProfileButton';
 
 function MovieDescription({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
-      <BackButton />
+      <View style={styles.row}>
+        <BackButton />
+        
+        <ProfileButton />
+      </View>
 
-      <View style={styles.titulo}>
-        <Text style={styles.titulo}>Guardian of the Galaxy</Text>
+      <View style={styles.tela}>
+        <Text style={styles.titulo}>
+          Guardian of the Galaxy
+        </Text>
 
         <Image
-          style={{ width: 130, height: 180 }}
+          style={styles.banner}
           source={{
             uri:
               'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Guardians%20of%20the%20Galaxy%20(2014).jpg',
@@ -26,16 +33,18 @@ function MovieDescription({ navigation: { navigate } }) {
 
         <Text>⭐⭐⭐⭐⭐</Text>
 
-        <Button
-          title="Rate"
-          style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
-          onPress={() => navigate('Rate')}
-        />
+        <View style={styles.button}>
+          <Button
+            title="Rate"
+            onPress={() => navigate('Rate')}
+          />
+        </View>
 
-        <Button
-          title="Get it now"
-          style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
-        />
+        <View style={styles.button}>
+          <Button 
+            title="Get it now"
+          />
+        </View>
       </View>
 
       <Text style={styles.subTitulo}>OVERVIEW</Text>
@@ -78,33 +87,63 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0A0430',
+    marginBottom:20,
+  },
+
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+
+  tela:{
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  banner:{
+    width: 130, 
+    height: 180,
+    marginTop:10,
+    marginBottom:10,
   },
 
   titulo: {
-    alignItems: 'center',
-    justifyContent: 'center',
     color: '#DAD8D8',
     fontSize: 30,
     fontFamily: 'monospace',
-    fontStyle: 'normal',
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
 
   subTitulo: {
     alignItems: 'center',
     justifyContent: 'center',
     color: '#DAD8D8',
-    fontSize: 20,
+    fontSize: 18,
+    fontWeight: 'bold',
     fontFamily: 'monospace',
     fontStyle: 'normal',
+    marginLeft:15,
+    marginTop:10,
   },
 
   texto: {
     alignItems: 'center',
     justifyContent: 'center',
     color: '#DAD8D8',
-    fontSize: 10,
+    fontSize: 12,
     fontFamily: 'monospace',
     fontStyle: 'normal',
+    textAlign: 'justify',
+    marginLeft:25,
+    marginRight:15,
+  },
+
+  button:{
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginTop: 10,
   },
 });
 

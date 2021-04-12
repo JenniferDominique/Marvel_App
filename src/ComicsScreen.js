@@ -7,11 +7,16 @@ import {
   Button,
 } from 'react-native';
 import BackButton from './BackButton';
+import ProfileButton from './ProfileButton';
 
 function ComicsScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
-      <BackButton/>
+      <View style={styles.row}>
+        <BackButton />
+        
+        <ProfileButton />
+      </View>
 
       <View style={styles.titulo}>
         <Text style={styles.titulo}>Comics</Text>
@@ -93,6 +98,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0A0430',
+  },
+
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
 
   titulo: {

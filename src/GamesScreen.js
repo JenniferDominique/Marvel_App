@@ -7,11 +7,16 @@ import {
   Button,
 } from 'react-native';
 import BackButton from './BackButton';
+import ProfileButton from './ProfileButton';
 
 function GamesScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
-      <BackButton/>
+      <View style={styles.row}>
+        <BackButton />
+        
+        <ProfileButton />
+      </View>
 
       <View style={styles.titulo}>
         <Text style={styles.titulo}>
@@ -101,6 +106,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'monospace',
     fontStyle: 'normal',
+  },
+
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
 
   subTitulo: {

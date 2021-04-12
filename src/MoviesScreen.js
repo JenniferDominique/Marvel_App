@@ -8,92 +8,103 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import BackButton from './BackButton';
+import ProfileButton from './ProfileButton';
 
 function MoviesScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
-      <BackButton/>
+      <View style={styles.row}>
+        <BackButton />
+        
+        <ProfileButton />
+      </View>
 
-      <View style={styles.titulo}>
-        <Text style={styles.titulo}
-        >
-          Movies
+      <View style={styles.tela}>
+        <Text style={styles.titulo}>
+          MOVIES
         </Text>
 
-        <TouchableOpacity
-          style={styles.buttonBackStyle}
-          activeOpacity={0.5}
-          onPress={() => navigate('MovieDescription')}
-          >
+        <View style={styles.filme}>
+          <TouchableOpacity
+            style={styles.tela}
+            activeOpacity={0.5}
+            onPress={() => navigate('MovieDescription')}
+            >
+            <Image
+            style={{ width: 130, height: 180}}
+            source={{
+              uri:
+                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Guardians%20of%20the%20Galaxy%20(2014).jpg",
+            }}
+          />
+
+            <Text style={styles.subTitulo}>
+              Guardian of the Galaxy
+            </Text>
+
+            <Text style={styles.subSubTitulo}>
+              2014
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.filme}>
           <Image
-          style={{ width: 130, height: 180}}
-          source={{
-            uri:
-              "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Guardians%20of%20the%20Galaxy%20(2014).jpg",
-          }}
-        />
+            style={{ width: 130, height: 180}}
+            source={{
+              uri:
+                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Avangers%20Endgame%20(2019).jpg",
+            }}
+          />
 
-        <Text style={styles.subTitulo}>
-          Guardian of the Galaxy
-        </Text>
+          <Text style={styles.subTitulo}>
+            Avangers: Endgame
+          </Text>
 
-        <Text style={styles.subSubTitulo}>
-          2014
-        </Text>
-        </TouchableOpacity>
+          <Text style={styles.subSubTitulo}>
+            2019
+          </Text>
+        </View>
 
-        <Image
-          style={{ width: 130, height: 180}}
-          source={{
-            uri:
-              "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Avangers%20Endgame%20(2019).jpg",
-          }}
-        />
+        <View style={styles.filme}>
+          <Image
+            style={{ width: 130, height: 180}}
+            source={{
+              uri:
+                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Captain%20America-%20Civil%20War%20(2016).jpg",
+            }}
+          />
 
-        <Text style={styles.subTitulo}
-        >
-          Avangers: Endgame
-        </Text>
+          <Text style={styles.subTitulo}>
+            Captain America: Civil War
+          </Text>
 
-        <Text style={styles.subSubTitulo}>
-          2019
-        </Text>
+          <Text style={styles.subSubTitulo}>
+            2016
+          </Text>
+        </View>
 
-        <Image
-          style={{ width: 130, height: 180}}
-          source={{
-            uri:
-              "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Captain%20America-%20Civil%20War%20(2016).jpg",
-          }}
-        />
+        <View style={styles.filme}>
+          <Image
+            style={{ width: 130, height: 180}}
+            source={{
+              uri:
+                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Captain%20Marvel%20(2019).jpg",
+            }}
+          />
 
-        <Text style={styles.subTitulo}>
-          Captain America: Civil War
-        </Text>
+          <Text style={styles.subTitulo}>
+            Captain Marvel
+          </Text>
 
-        <Text style={styles.subSubTitulo}>
-          2016
-        </Text>
-
-        <Image
-          style={{ width: 130, height: 180}}
-          source={{
-            uri:
-              "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Captain%20Marvel%20(2019).jpg",
-          }}
-        />
-
-        <Text style={styles.subTitulo}>
-          Captain Marvel
-        </Text>
-
-        <Text style={styles.subSubTitulo}>
-          2019
-        </Text>
+          <Text style={styles.subSubTitulo}>
+            2019
+          </Text>
+        </View>
 
         <Button
         title="More"
-        style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
+        style={styles.button}
       />
       </View>
 
@@ -107,9 +118,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#0A0430',
   },
 
-  titulo: {
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+
+  tela:{
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  titulo: {
     color: '#DAD8D8',
     fontSize: 30,
     fontFamily: 'monospace',
@@ -132,6 +152,19 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontFamily: 'monospace',
     fontStyle: 'normal',
+  },
+
+  filme:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+    marginBottom: 10,
+  },
+
+  button:{
+    margin: 20, 
+    justifyContent: 'center', 
+    alignItems: 'center',
   },
 });
 
