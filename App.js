@@ -15,28 +15,22 @@ import TvScreen from './src/TvScreen';
 import ComicsScreen from './src/ComicsScreen';
 import NewsScreen from './src/NewsScreen';
 import RateScreen from './src/RateScreen';
-import ProfileScreen from './src/ProfileScreen';
-import ProfileSettings from './src/ProfileSettings';
-import ProfileEdit from './src/ProfileEdit';
-import QuitScreen from './src/QuitScreen';
+
+// ------------------------APP----------------------------------
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Start">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Start" component={StartScreen} />
         <Stack.Screen name="Acesso" component={AccessScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="CadastroI" component={RegisterIScreen} />
         <Stack.Screen name="CadastroII" component={RegisterIIScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-        <Stack.Screen name="Settings" component={ProfileSettings} />
-        <Stack.Screen name="Edit" component={ProfileEdit} />
-        <Stack.Screen name="Quit" component={QuitScreen} />
-
+        
         <Stack.Screen name="Games" component={GamesScreen} />
         <Stack.Screen name="Movies" component={MoviesScreen} />
         <Stack.Screen name="Tv" component={TvScreen} />
