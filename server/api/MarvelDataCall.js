@@ -7,6 +7,7 @@ class MarvelDataCall extends React.Component {
     this.state = {};
   }
 
+  // Configuração de conexao com as chaves e link de acesso (link ainda estatico)
   componentDidMount() {
     let baseUrl = 'https://gateway.marvel.com/v1/public/characters';
     const publicKey = '9f23d1a8ed83a6a8f819ce9cfe38da1a';
