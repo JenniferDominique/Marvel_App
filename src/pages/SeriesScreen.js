@@ -9,7 +9,7 @@ import BackButton from './BackButton';
 import ProfileButton from './ProfileButton';
 import ApiSeries from '../services/ApiSeries';
 
-function Seriecreen({ navigation: { navigate } }) {
+function SerieScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
