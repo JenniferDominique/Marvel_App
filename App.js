@@ -2,23 +2,26 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import CarouselPager from 'react-native-carousel-pager';
-import StartScreen from './src/StartScreen';
-import AccessScreen from './src/AccessScreen';
-import LoginScreen from './src/LoginScreen';
-import RegisterIScreen from './src/RegisterIScreen';
-import RegisterIIScreen from './src/RegisterIIScreen';
-import HomeScreen from './src/HomeScreen';
-import GamesScreen from './src/GamesScreen';
-import MoviesScreen from './src/MoviesScreen';
-import MovieDescription from './src/MovieDescription';
-import TvScreen from './src/TvScreen';
-import ComicsScreen from './src/ComicsScreen';
-import NewsScreen from './src/NewsScreen';
-import RateScreen from './src/RateScreen';
-import ProfileScreen from './src/ProfileScreen';
-import ProfileSettings from './src/ProfileSettings';
-import ProfileEdit from './src/ProfileEdit';
-import QuitScreen from './src/QuitScreen';
+import StartScreen from './src/pages/StartScreen';
+import AccessScreen from './src/pages/AccessScreen';
+import LoginScreen from './src/pages/LoginScreen';
+import RegisterIScreen from './src/pages/RegisterIScreen';
+import RegisterIIScreen from './src/pages/RegisterIIScreen';
+import HomeScreen from './src/pages/HomeScreen';
+import GamesScreen from './src/pages/GamesScreen';
+import MoviesScreen from './src/pages/MoviesScreen';
+import MovieDescription from './src/pages/MovieDescription';
+import TvScreen from './src/pages/TvScreen';
+import ComicsScreen from './src/pages/ComicsScreen';
+import NewsScreen from './src/pages/NewsScreen';
+import RateScreen from './src/pages/RateScreen';
+import ProfileScreen from './src/pages/ProfileScreen';
+import ProfileSettings from './src/pages/ProfileSettings';
+import ProfileEdit from './src/pages/ProfileEdit';
+import QuitScreen from './src/pages/QuitScreen';
+import Camera from './src/pages/Camera';
+import CharacterScreen from './src/pages/CharacterScreen';
+
 
 const Stack = createStackNavigator();
 
@@ -36,15 +39,15 @@ function App() {
         <Stack.Screen name="Settings" component={ProfileSettings} />
         <Stack.Screen name="Edit" component={ProfileEdit} />
         <Stack.Screen name="Quit" component={QuitScreen} />
+        <Stack.Screen name="Camera" component={Camera} />
 
         <Stack.Screen name="Games" component={GamesScreen} />
         <Stack.Screen name="Movies" component={MoviesScreen} />
         <Stack.Screen name="Tv" component={TvScreen} />
         <Stack.Screen name="Comics" component={ComicsScreen} />
         <Stack.Screen name="News" component={NewsScreen} />
-        
-        <Stack.Screen name="MovieDescription" component={MovieDescription} />
-
+        <Stack.Screen name="MovieDescription" component={MovieDescription}/>
+        <Stack.Screen name="Characters" component={CharacterScreen} />
         <Stack.Screen name="Rate" component={RateScreen} />
       </Stack.Navigator>
     </NavigationContainer>
