@@ -233,7 +233,6 @@ function HomeScreen({ navigation: { navigate } }) {
         </CarouselPager>
       </View>
       
-
       <Text style={styles.subtitulo}>Spacial Content</Text>
 
       <View style={styles.carroselView2}>
