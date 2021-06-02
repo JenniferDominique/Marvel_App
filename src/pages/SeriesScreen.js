@@ -3,36 +3,33 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   Button,
 } from 'react-native';
 import BackButton from './BackButton';
 import ProfileButton from './ProfileButton';
-import ApiEvents from '../services/ApiEvents';
+import ApiSeries from '../services/ApiSeries';
 
-function NewsScreen({ navigation: { navigate } }) {
+function Seriecreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
         <BackButton />
-        
         <ProfileButton />
       </View>
 
       <View style={styles.titulo}>
         <Text style={styles.titulo}>
-          EVENTS
+          Series
         </Text>
 
-
         <View style={styles.subSubTitulo}>
-          <ApiEvents/>
+          <ApiSeries/>
         </View>
 
         <Button
-        title="More"
-        style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
-      />
+          title="More"
+          style={{ margin: 20, justifyContent: 'center', alignItems: 'center' }}
+        />
       </View>
 
     </View>
@@ -45,6 +42,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#0A0430',
   },
 
+  row:{
+    // https://reactnative.dev/docs/layout-props
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+
   titulo: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -52,12 +55,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'monospace',
     fontStyle: 'normal',
-  },
-
-  row:{
-    // https://reactnative.dev/docs/layout-props
-    flexDirection: 'row',
-    justifyContent: 'space-between'
   },
 
   subTitulo: {
@@ -79,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NewsScreen;
+export default SerieScreen;

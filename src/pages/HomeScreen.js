@@ -34,13 +34,13 @@ function HomeScreen({ navigation: { navigate } }) {
           pageSpacing={-160}
           pageStyle={styles.carrosel}
         >
-          <TouchableOpacity id='gamesButton'
+          <TouchableOpacity id='charactersButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
-            onPress={() => navigate('Games')}
+            onPress={() => navigate('Characters')}
           >
             <Image
-              key="games"
+              key="characters"
               style={styles.imgButton}
               source={{
                 uri:
@@ -49,13 +49,13 @@ function HomeScreen({ navigation: { navigate } }) {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity id='moviesButton'
+          <TouchableOpacity id='storiesButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
-            onPress={() => navigate('Movies')}
+            onPress={() => navigate('Stories')}
           >
             <Image
-              key="movies"
+              key="stories"
               style={styles.imgButton}
               source={{
                 uri:
@@ -64,13 +64,13 @@ function HomeScreen({ navigation: { navigate } }) {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity id='tvButton'
+          <TouchableOpacity id='seriesButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
-            onPress={() => navigate('Tv')}
+            onPress={() => navigate('Series')}
           >
             <Image
-              key="tv"
+              key="series"
               style={styles.imgButton}
               source={{
                 uri:
@@ -94,13 +94,13 @@ function HomeScreen({ navigation: { navigate } }) {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity id='newsButton'
+          <TouchableOpacity id='eventsButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
-            onPress={() => navigate('News')}
+            onPress={() => navigate('Events')}
           >
             <Image
-              key="news"
+              key="events"
               style={styles.imgButton}
               source={{
                 uri:

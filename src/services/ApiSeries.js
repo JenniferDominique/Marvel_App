@@ -7,7 +7,7 @@ import {
   } from 'react-native';
 import md5 from './md5Min';
 
-function ApiTv() {
+function ApiSeries() {
   const [series, setSeries] = useState([]);
 
   useEffect(() => {
@@ -74,4 +74,4 @@ function ApiTv() {
   );
 }
 
-export default ApiTv;
+export default ApiSeries;

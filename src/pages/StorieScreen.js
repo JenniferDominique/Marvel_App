@@ -11,7 +11,7 @@ import BackButton from './BackButton';
 import ProfileButton from './ProfileButton';
 import ApiStories from '../services/ApiStories';
 
-function MoviesScreen({ navigation: { navigate } }) {
+function StorieScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
@@ -22,7 +22,7 @@ function MoviesScreen({ navigation: { navigate } }) {
 
       <View style={styles.tela}>
         <Text style={styles.titulo}>
-          MOVIES
+          STORIES
         </Text>
 
         <View style={styles.subSubTitulo}>
@@ -120,4 +120,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MoviesScreen;
+export default StorieScreen;
