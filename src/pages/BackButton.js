@@ -7,7 +7,9 @@ import {
 import { useNavigation } from '@react-navigation/native';
 
 function BackButton() {
+  
   const navigation = useNavigation();
+  
   return (
     <TouchableOpacity
       style={styles.buttonBackStyle}

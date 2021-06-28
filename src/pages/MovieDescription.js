@@ -14,7 +14,6 @@ function MovieDescription({ navigation: { navigate } }) {
     <View style={styles.container}>
       <View style={styles.row}>
         <BackButton />
-        
         <ProfileButton />
       </View>
 

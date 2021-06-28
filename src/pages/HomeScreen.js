@@ -17,7 +17,7 @@ function HomeScreen({ navigation: { navigate } }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.row}>      
+      <View style={styles.row}>
         <ProfileButton />
       </View>
 
@@ -31,83 +31,99 @@ function HomeScreen({ navigation: { navigate } }) {
         <CarouselPager
           key="menu"
           initialPage={1}
-          pageSpacing={-160}
+          pageSpacing={-150}
           pageStyle={styles.carrosel}
         >
-          <TouchableOpacity id='gamesButton'
+          <TouchableOpacity id='seriesButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
-            onPress={() => navigate('Games')}
-            >
+            onPress={() => navigate('Series')}
+          >
             <Image
-            key="games"
-            style={styles.imgButton}
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_games.png',
-            }}
-          />
+              key="series"
+              style={styles.imgButton}
+              source={{
+                uri:
+                  'https://github.com/JenniferDominique/Marvel_App/blob/integracao-Api/img/buttons/button_Series.png?raw=true',
+              }}
+            />
           </TouchableOpacity>
 
-          <TouchableOpacity id='moviesButton'
+          <TouchableOpacity id='charactersButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
-            onPress={() => navigate('Movies')}
-            >
+            onPress={() => navigate('Characters')}
+          >
             <Image
-            key="movies"
-            style={styles.imgButton}
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_movies.png',
-            }}
-          />
+              key="characters"
+              style={styles.imgButton}
+              source={{
+                uri:
+                  'https://github.com/JenniferDominique/Marvel_App/blob/integracao-Api/img/buttons/button_Characters.png?raw=true',
+              }}
+            />
           </TouchableOpacity>
 
-          <TouchableOpacity id='tvButton'
-            style={styles.buttonBackStyle}
-            activeOpacity={0.5}
-            onPress={() => navigate('Tv')}
-            >
-            <Image
-            key="tv"
-            style={styles.imgButton}
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_tv.png',
-            }}
-          />
-          </TouchableOpacity>
-          
           <TouchableOpacity id='comicsButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
             onPress={() => navigate('Comics')}
-            >
+          >
             <Image
-            key="comics"
-            style={styles.imgButton}
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_comics.png',
-            }}
-          />
+              key="comics"
+              style={styles.imgButton}
+              source={{
+                uri:
+                  'https://github.com/JenniferDominique/Marvel_App/blob/integracao-Api/img/buttons/button_Comics.png?raw=true',
+              }}
+            />
           </TouchableOpacity>
-          
-          <TouchableOpacity id='newsButton'
+
+          <TouchableOpacity id='storiesButton'
             style={styles.buttonBackStyle}
             activeOpacity={0.5}
-            onPress={() => navigate('News')}
-            >
+            onPress={() => navigate('Stories')}
+          >
             <Image
-            key="news"
-            style={styles.imgButton}
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/button_news.png',
-            }}
-          />
+              key="stories"
+              style={styles.imgButton}
+              source={{
+                uri:
+                  'https://github.com/JenniferDominique/Marvel_App/blob/integracao-Api/img/buttons/button_Stories.png?raw=true',
+              }}
+            />
           </TouchableOpacity>
+
+          <TouchableOpacity id='eventsButton'
+            style={styles.buttonBackStyle}
+            activeOpacity={0.5}
+            onPress={() => navigate('Events')}
+          >
+            <Image
+              key="events"
+              style={styles.imgButton}
+              source={{
+                uri:
+                  'https://github.com/JenniferDominique/Marvel_App/blob/integracao-Api/img/buttons/button_Events.png?raw=true',
+              }}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity id='rankingButton'
+            style={styles.buttonBackStyle}
+            activeOpacity={0.5}
+            onPress={() => navigate('Ranking')}
+          >
+            <Image
+              key="ranking"
+              style={styles.imgButton}
+              source={{
+                uri:
+                  'https://github.com/JenniferDominique/Marvel_App/blob/integracao-Api/img/buttons/button_Ranking.png?raw=true',
+              }}
+            />
+          </TouchableOpacity>
+
         </CarouselPager>
       </View>
 
@@ -117,6 +133,7 @@ function HomeScreen({ navigation: { navigate } }) {
         placeholder="   Search..."
         style={styles.input}
       />
+
 
       <Text style={styles.subtitulo}>What's New?</Text>
 
@@ -180,7 +197,7 @@ function HomeScreen({ navigation: { navigate } }) {
           />
         </CarouselPager>
       </View>
-      
+
       <Text style={styles.subtitulo}>Most Viewed</Text>
 
       <View style={styles.carroselView}>
@@ -216,7 +233,6 @@ function HomeScreen({ navigation: { navigate } }) {
         </CarouselPager>
       </View>
       
-      
       <Text style={styles.subtitulo}>Spacial Content</Text>
 
       <View style={styles.carroselView2}>
@@ -251,6 +267,7 @@ function HomeScreen({ navigation: { navigate } }) {
           />
         </CarouselPager>
       </View>
+      
     </View>
   );
 }
@@ -261,16 +278,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#0A0430',
   },
 
-  row:{
+  row: {
     // https://reactnative.dev/docs/layout-props
     flexDirection: 'row',
     justifyContent: 'flex-end'
   },
 
-  titleView:{
+  titleView: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom:15,
+    marginBottom: 15,
   },
 
   titulo: {
@@ -279,57 +296,57 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace',
   },
 
-  input:{
+  input: {
     backgroundColor: 'white',
-    fontSize:15,
-    borderRadius:5,
-    marginTop:20,
-    marginBottom:20,
-    marginRight:30,
-    marginLeft:30,
+    fontSize: 15,
+    borderRadius: 5,
+    marginTop: 20,
+    marginBottom: 20,
+    marginRight: 30,
+    marginLeft: 30,
   },
 
-  carrosel:{
-    alignItems:'center', 
-    justifyContent:'center',
+  carrosel: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
-  carroselView:{
-    height:150,  
+  carroselView: {
+    height: 150,
   },
 
-  carroselView1:{
-    height:100,  
+  carroselView1: {
+    height: 140,
   },
 
-  carroselView2:{
-    height:180,  
+  carroselView2: {
+    height: 180,
   },
 
   subtitulo: {
     color: '#DAD8D8',
     fontSize: 25,
     fontFamily: 'monospace',
-    marginLeft:15,
-    marginTop:10,
-    marginBottom:15,
+    marginLeft: 15,
+    marginTop: 10,
+    marginBottom: 15,
   },
 
-  imgButton:{
-    width: 100, 
-    height: 100,
+  imgButton: {
+    width: 110,
+    height: 140,
   },
 
-  img:{
-    width: 100, 
-    height:150,
+  img: {
+    width: 100,
+    height: 150,
   },
 
-  imgSpecial:{
-    width: 130, 
+  imgSpecial: {
+    width: 130,
     height: 180,
   },
-  
+
 });
 
 export default HomeScreen;

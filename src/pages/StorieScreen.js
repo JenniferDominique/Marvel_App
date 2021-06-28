@@ -9,8 +9,9 @@ import {
 } from 'react-native';
 import BackButton from './BackButton';
 import ProfileButton from './ProfileButton';
+import ApiStories from '../services/ApiStories';
 
-function MoviesScreen({ navigation: { navigate } }) {
+function StorieScreen({ navigation: { navigate } }) {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
@@ -21,8 +22,13 @@ function MoviesScreen({ navigation: { navigate } }) {
 
       <View style={styles.tela}>
         <Text style={styles.titulo}>
-          MOVIES
+          STORIES
         </Text>
+
+        <View style={styles.subSubTitulo}>
+          <ApiStories/>
+        </View>
+
 
         <View style={styles.filme}>
           <TouchableOpacity
@@ -31,12 +37,12 @@ function MoviesScreen({ navigation: { navigate } }) {
             onPress={() => navigate('MovieDescription')}
             >
             <Image
-            style={{ width: 130, height: 180}}
-            source={{
-              uri:
-                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Guardians%20of%20the%20Galaxy%20(2014).jpg",
-            }}
-          />
+              style={{ width: 130, height: 180}}
+              source={{
+                uri:
+                  "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Guardians%20of%20the%20Galaxy%20(2014).jpg",
+              }}
+            />
 
             <Text style={styles.subTitulo}>
               Guardian of the Galaxy
@@ -46,60 +52,6 @@ function MoviesScreen({ navigation: { navigate } }) {
               2014
             </Text>
           </TouchableOpacity>
-        </View>
-
-        <View style={styles.filme}>
-          <Image
-            style={{ width: 130, height: 180}}
-            source={{
-              uri:
-                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Avangers%20Endgame%20(2019).jpg",
-            }}
-          />
-
-          <Text style={styles.subTitulo}>
-            Avangers: Endgame
-          </Text>
-
-          <Text style={styles.subSubTitulo}>
-            2019
-          </Text>
-        </View>
-
-        <View style={styles.filme}>
-          <Image
-            style={{ width: 130, height: 180}}
-            source={{
-              uri:
-                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Captain%20America-%20Civil%20War%20(2016).jpg",
-            }}
-          />
-
-          <Text style={styles.subTitulo}>
-            Captain America: Civil War
-          </Text>
-
-          <Text style={styles.subSubTitulo}>
-            2016
-          </Text>
-        </View>
-
-        <View style={styles.filme}>
-          <Image
-            style={{ width: 130, height: 180}}
-            source={{
-              uri:
-                "https://raw.githubusercontent.com/JenniferDominique/Marvel_App/master/img/posters/Movie%20-%20Captain%20Marvel%20(2019).jpg",
-            }}
-          />
-
-          <Text style={styles.subTitulo}>
-            Captain Marvel
-          </Text>
-
-          <Text style={styles.subSubTitulo}>
-            2019
-          </Text>
         </View>
 
         <Button
@@ -168,4 +120,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MoviesScreen;
+export default StorieScreen;

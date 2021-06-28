@@ -40,6 +40,7 @@ function ProfileSettings({ navigation: { navigate } }) {
           <Button
             title="Edit Photo"
             color="#8A8888"
+            onPress={() => navigate('Camera')}
           />
         </View>
 

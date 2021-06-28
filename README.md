@@ -1,4 +1,6 @@
-# Marvel App 📱🦸🏻‍♂️ 
+<img src="https://github.com/JenniferDominique/Marvel_App/blob/server-database/assets/banner-marvel.png" alt="banner o projeto">
+
+-------------------------
 
 ## Build do Sistema
 
@@ -11,3 +13,6 @@ expo start
 ```
 
 Então a aplicação será carregada e aberta para a visualização no browser, mas rodando localmente.
+
+# Documentação do Banco de Dados
+<a href="https://github.com/JenniferDominique/Marvel_App/tree/server-database/server/documentation">Visualize a documentação do banco de dados</a>
