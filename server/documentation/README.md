@@ -59,7 +59,7 @@ create table item_API
 
 
 
-# no mySQL PhpMyAdmin
+# no mySQL PhpMyAdmin (http://localhost/phpmyadmin/index.php)
 
 ```
 -- phpMyAdmin SQL Dump
