@@ -4,17 +4,10 @@
 
 ## Build do Sistema
 
-* Clone o reósitório;
-
 * Abra o terminal de comando (cmd) dentro do diretório do projeto;
-  * Obs.: Tem que ter o Node, React e o Expo devidamente instalados.
+  * Obs.: Tem que ter o React e o Expo devidamente instalado.
 
-* Digite o seguinte comando para o Node baixar todas as dependências necessárias:
-```
-npm install
-```
-
-* Em seguida, digite o comando para fazer o build do sistema utilizando a ferramenta Expo:
+* Digite os seguintes para fazer o build do sistema utilizando a ferramenta Expo:
 ```
 expo start
 ```
